@@ -31,7 +31,7 @@
 // >>> BURAYI DOLDURUN: Trello Power-Up API anahtarınız <<<
 // https://trello.com/power-ups/admin adresinden alınır.
 // popup.js içindeki TRELLO_API_KEY ile BİREBİR AYNI olmalıdır.
-var TRELLO_API_KEY = 'BURAYA_TRELLO_API_KEYINIZI_YAZIN';
+var TRELLO_API_KEY = '018c970fc1fe9e550f95c5ec236176ac';
 var APP_NAME = 'HMK Süre Hesaplama';
 var APP_AUTHOR = 'HMK Süre Hesaplama';
 
