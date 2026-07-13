@@ -21,7 +21,7 @@
   // ÖNEMLİ: t.getRestApi() appKey/appName olmadan çalışmaz (throw eder).
   // Bu değer power-up.js'deki TRELLO_API_KEY / APP_NAME ile BİREBİR AYNI
   // olmalıdır — ikisini de aynı anda güncelleyin.
-  var TRELLO_API_KEY = 'BURAYA_TRELLO_API_KEYINIZI_YAZIN';
+  var TRELLO_API_KEY = '018c970fc1fe9e550f95c5ec236176ac';
   var APP_NAME = 'HMK Süre Hesaplama';
 
   var t = TrelloPowerUp.iframe({
