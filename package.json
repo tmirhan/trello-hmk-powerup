@@ -1,0 +1,10 @@
+{
+  "name": "trello-hmk-powerup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HMK (6100 sayılı Hukuk Muhakemeleri Kanunu) hükümlerine uygun hukuki süre hesaplaması yapan Trello Power-Up. Statik sitedir; build adımı veya Node.js bağımlılığı gerektirmez.",
+  "scripts": {
+    "build": "echo 'Build adımı gerekmiyor - bu proje statik bir sitedir.'"
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMK Süre Hesaplama</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- 1. Tebligat Türü -->
+    <fieldset class="field-group" id="tebligat-turu-group">
+      <legend>1. Tebligat Türü</legend>
+
+      <label class="radio-option">
+        <input type="radio" name="tebligatTuru" value="e-teblig" />
+        <span>E-Tebliğ</span>
+      </label>
+
+      <label class="radio-option">
+        <input type="radio" name="tebligatTuru" value="tefhim" />
+        <span>Tefhim</span>
+      </label>
+
+      <label class="radio-option">
+        <input type="radio" name="tebligatTuru" value="fiziki" />
+        <span>Fiziki Tebliğ</span>
+      </label>
+    </fieldset>
+
+    <!-- 2. Başlangıç Tarihi -->
+    <div class="field-group">
+      <label for="baslangicTarihi" class="field-label">2. Başlangıç Tarihi</label>
+      <input type="date" id="baslangicTarihi" class="text-input" />
+      <p class="hint" id="tebligatHint"></p>
+    </div>
+
+    <!-- 3. Süre Girişi -->
+    <div class="field-group">
+      <label class="field-label">3. Süre</label>
+      <div class="sure-row">
+        <input type="number" id="sureMiktari" class="number-input" min="1" step="1" value="1" />
+        <div class="unit-options">
+          <label class="radio-option-inline">
+            <input type="radio" name="sureBirimi" value="gun" checked />
+            <span>Gün</span>
+          </label>
+          <label class="radio-option-inline">
+            <input type="radio" name="sureBirimi" value="hafta" />
+            <span>Hafta</span>
+          </label>
+          <label class="radio-option-inline">
+            <input type="radio" name="sureBirimi" value="ay" />
+            <span>Ay</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quick-buttons">
+        <button type="button" class="quick-btn" data-miktar="1" data-birim="hafta">1 Hafta</button>
+        <button type="button" class="quick-btn" data-miktar="2" data-birim="hafta">2 Hafta</button>
+      </div>
+    </div>
+
+    <!-- Hata mesajı -->
+    <p class="error-message" id="errorMessage" hidden></p>
+
+    <!-- Kart bağlamı yoksa (pano butonundan açıldıysa) gösterilecek bilgi -->
+    <p class="info-note" id="noCardNote" hidden>
+      ℹ️ Bu popup bir panodan açıldı, belirli bir karta bağlı değil. Hesabı
+      görebilirsiniz, ancak sonucu bir Trello kartına yazmak için Power-Up
+      butonunu doğrudan bir kartın üzerinden açmanız gerekir.
+    </p>
+
+    <!-- Butonlar -->
+    <div class="button-row">
+      <button type="button" id="hesaplaBtn" class="btn btn-secondary" disabled>Hesapla</button>
+      <button type="button" id="hesaplaUygulaBtn" class="btn btn-primary" disabled>Hesapla ve Uygula</button>
+    </div>
+
+    <!-- Sonuç -->
+    <div class="result-box" id="resultBox" hidden>
+      <h3>Hesaplama Sonucu</h3>
+      <dl class="result-list">
+        <dt>Başlangıç Tarihi</dt>
+        <dd id="resBaslangic">-</dd>
+
+        <dt>Tebligat Türü</dt>
+        <dd id="resTebligatTuru">-</dd>
+
+        <dt>Tebliğ Edilmiş Sayılan Tarih</dt>
+        <dd id="resTebligTarihi">-</dd>
+
+        <dt>Süre Başlangıcı</dt>
+        <dd id="resSureBaslangici">-</dd>
+
+        <dt>Süre</dt>
+        <dd id="resSure">-</dd>
+
+        <dt>Son Gün</dt>
+        <dd id="resSonGun" class="highlight">-</dd>
+      </dl>
+      <p class="extend-note" id="extendNote" hidden></p>
+      <p class="warning-note" id="missingDataWarning" hidden>
+        ⚠️ Bu yıl için dinî bayram (Ramazan/Kurban Bayramı) tarihleri sistemde
+        tanımlı değil. Lütfen son günü resmî tatil takvimiyle manuel olarak
+        karşılaştırın.
+      </p>
+    </div>
+
+    <p class="apply-status" id="applyStatus" hidden></p>
+
+  </div>
+
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <script src="dateUtils.js"></script>
+  <script src="holidays.js"></script>
+  <script src="hmk.js"></script>
+  <script src="calculator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

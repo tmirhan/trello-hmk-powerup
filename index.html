@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMK Süre Hesaplama — Trello Power-Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="landing">
+    <h1>⚖️ HMK Süre Hesaplama — Trello Power-Up</h1>
+    <p>
+      Bu adres, Trello için geliştirilmiş <strong>HMK Süre Hesaplama</strong>
+      Power-Up'ının statik dosyalarının barındırıldığı sitedir. Bu sayfa
+      Trello tarafından kullanılmaz — yalnızca insanlar için bilgilendirme
+      amaçlıdır.
+    </p>
+
+    <h2>Bu Power-Up ne yapar?</h2>
+    <ul>
+      <li>6100 sayılı HMK m.90, m.91 ve m.93 hükümlerine uygun hukuki süre hesabı yapar.</li>
+      <li>E-Tebliğ, Tefhim ve Fiziki Tebliğ türlerine göre süre başlangıcını doğru belirler.</li>
+      <li>Gün / hafta / ay bazlı süreleri, ay-sonu ve hafta sonu/resmî tatil kurallarına göre hesaplar.</li>
+      <li>Hesaplanan son günü doğrudan Trello kartının Bitiş Tarihi (Due Date) alanına yazar.</li>
+    </ul>
+
+    <h2>Trello panonuza nasıl eklersiniz?</h2>
+    <p>
+      Kurulum adımları için depodaki <code>README.md</code> dosyasına bakın.
+      Özetle:
+    </p>
+    <ol>
+      <li><a href="https://trello.com/power-ups/admin" target="_blank" rel="noopener">trello.com/power-ups/admin</a> üzerinden yeni bir Power-Up oluşturun.</li>
+      <li>
+        Iframe Connector URL alanına
+        <code>https://PROJE_ADI.vercel.app/connector.html</code>
+        adresini girin.
+      </li>
+      <li>Bir API anahtarı üretin ve <code>power-up.js</code> ile <code>popup.js</code> dosyalarına ekleyin.</li>
+      <li>Power-Up'ı ilgili Trello panosunda etkinleştirin.</li>
+    </ol>
+
+    <p class="footnote">
+      Bu araç bir hesaplama yardımcısıdır, hukuki tavsiye niteliği taşımaz.
+      Kritik süreler için sonucu mutlaka manuel olarak teyit edin.
+    </p>
+  </div>
+</body>
+</html>

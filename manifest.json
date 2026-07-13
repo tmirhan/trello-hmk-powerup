@@ -1,0 +1,26 @@
+{
+  "_note": "Bu dosya belgeleme/referans amaçlıdır. Trello'nun klasik Power-Up paneli (trello.com/power-ups/admin) bu dosyayı otomatik okumaz; Connector URL, capability'ler ve API anahtarı Trello'nun web arayüzünden manuel olarak girilir. Adımlar için README.md dosyasına bakın.",
+  "name": "HMK Süre Hesaplama",
+  "details": "6100 sayılı Hukuk Muhakemeleri Kanunu m.90, m.91 ve m.93 hükümlerine uygun hukuki süre hesaplaması yapar ve sonucu doğrudan Trello kartının Bitiş Tarihi (Due Date) alanına yazar.",
+  "author": "HMK Süre Hesaplama",
+  "version": "1.0.0",
+  "connectors": {
+    "iframe": {
+      "url": "https://PROJE_ADI.vercel.app/connector.html"
+    }
+  },
+  "capabilities": [
+    "card-buttons",
+    "board-buttons",
+    "card-badges",
+    "authorization-status",
+    "show-settings"
+  ],
+  "listing": {
+    "tr": {
+      "name": "HMK Süre Hesaplama",
+      "overview": "Hukuki süre hesaplamalarını HMK'ya uygun şekilde otomatikleştirir.",
+      "description": "E-Tebliğ, Tefhim ve Fiziki Tebliğ türlerine göre süre başlangıcını hesaplar; gün/hafta/ay bazlı süreleri hafta sonu ve resmî tatilleri dikkate alarak hesaplayıp kartın Bitiş Tarihi alanına yazar."
+    }
+  }
+}
